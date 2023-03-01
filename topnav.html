@@ -9,8 +9,8 @@
 
 <div class="topnav" id="myTopnav">
   <a href="index.html" id="home_button">Home</a>
-  <a href="#projects" id="projects_button">Monthly Projects</a>
-  <a href="#recipes" id="recipes_button">Weekly Recipes</a>
+  <a href="projects.html" id="projects_button">Monthly Projects</a>
+  <a href="recipes.html" id="recipes_button">Weekly Recipes</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -34,6 +34,7 @@ function myFunction() {
     var current = location.pathname;
     $('#topnav a').each(function(){
         var $this = $(this);
+        console.log($this);
         // if the current path is like this link, make it active
         if($this.attr('href').indexOf(current) !== -1){
             $this.parent().addClass('active');
